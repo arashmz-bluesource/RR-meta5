@@ -1,0 +1,9 @@
+RR Backtest Tool — v3.00
+------------------------
+- Removed all visible strategy-name fields and labels.
+- Reworked chart panel and trade rows in a dark UI.
+- Moved RR/direction label to the left of each box; removed point/pip figures from the box label.
+- Added per-trade ALERT ON/OFF toggle, one-shot SL/TP crossing alert, sound, and persistent armed/fired state.
+- Default SL and TP distances now both equal 2 x average High-Low range of the 20 closed candles preceding the visible center anchor.
+- Preserved multiple tools on the chart, pagination, per-item delete, drag to resize/reposition, and approximate 60% visual box transparency.
+- Added Persian HTML and Markdown documentation with a schematic preview image.

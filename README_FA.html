@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>راهنمای RR Backtest Tool — متاتریدر ۵</title>
+<style>
+:root{--bg:#11161d;--panel:#242932;--panel2:#2f3742;--line:#46505e;--text:#edf2f7;--muted:#a6b5c7;--green:#43cd99;--red:#e8676d;--accent:#40be96;--gold:#e0a453}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 85% 0%,#1b2a32 0,transparent 36%),var(--bg);color:var(--text);font-family:Tahoma,"Segoe UI",sans-serif;line-height:1.9}
+a{color:#7de0bc;text-decoration:none}a:hover{text-decoration:underline}.wrap{width:min(1080px,94vw);margin:0 auto;padding:34px 0 56px}.hero{border:1px solid var(--line);border-radius:24px;overflow:hidden;background:linear-gradient(140deg,rgba(40,53,62,.95),rgba(29,34,43,.96));box-shadow:0 20px 70px #0005}.heroTop{display:flex;align-items:center;gap:16px;padding:28px 30px 18px}.icon{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;background:#40be9622;border:1px solid #40be9670;color:var(--accent);font-size:29px;font-weight:bold}.eyebrow{color:var(--accent);letter-spacing:2px;font-size:12px;font-weight:bold;direction:ltr;text-align:right}.hero h1{font-size:clamp(24px,4vw,39px);line-height:1.45;margin:3px 0}.hero p{color:var(--muted);margin:4px 0}.actions{display:flex;flex-wrap:wrap;gap:10px;padding:4px 30px 25px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:11px 17px;border-radius:11px;font-weight:bold;border:1px solid var(--line);background:#303947;color:var(--text)}.btn.primary{background:var(--accent);border-color:var(--accent);color:#10231d}.preview{padding:16px;background:#0e131a;border-top:1px solid var(--line)}.preview img{display:block;width:100%;height:auto;border-radius:13px;border:1px solid #3a4654}.caption{font-size:12px;color:var(--muted);text-align:center;margin:9px 0 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-top:18px}.card{background:linear-gradient(145deg,#252b35,#1d232c);border:1px solid var(--line);border-radius:18px;padding:22px}.card h2{font-size:19px;margin:0 0 12px;display:flex;align-items:center;gap:10px}.num{font-size:11px;background:#40be9620;color:var(--accent);border:1px solid #40be9655;border-radius:8px;padding:2px 8px;direction:ltr}.card p{color:var(--muted);margin:8px 0}.features{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:18px}.feature{background:#202731;border:1px solid #394453;border-radius:14px;padding:16px}.feature b{display:block;color:var(--text);margin-bottom:4px}.feature span{font-size:13px;color:var(--muted)}.pill{display:inline-block;border-radius:999px;padding:2px 10px;font-size:12px;background:#303947;color:#b9c7d8;direction:ltr}.formula{font-family:Consolas,monospace;direction:ltr;text-align:center;background:#121922;border:1px solid #3d4a59;border-radius:12px;padding:16px;color:#9ae6c9;font-size:15px;margin:14px 0}.steps{padding-right:22px;margin:8px 0}.steps li{padding:4px 0;color:var(--muted)}.warn{border-right:4px solid var(--gold);background:#e0a45312;padding:14px 16px;border-radius:10px;color:#e7d3b1}.footer{margin-top:18px;text-align:center;color:#7f8d9f;font-size:12px}@media(max-width:760px){.grid,.features{grid-template-columns:1fr}.heroTop{padding:22px}.actions{padding:4px 22px 22px}.card{padding:18px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section class="hero">
+    <div class="heroTop">
+      <div class="icon">RR</div>
+      <div>
+        <div class="eyebrow">METATRADER 5 · INDICATOR · VERSION 3.00</div>
+        <h1>RR Backtest Tool</h1>
+        <p>ابزار رسم سریع ریسک‌به‌ریوارد برای بک‌تست دستی روی نمودار</p>
+      </div>
+    </div>
+    <div class="actions">
+      <a class="btn primary" href="RR_Backtest_Tool.mq5">⬇ دریافت سورس MQ5</a>
+      <a class="btn" href="README_FA.md">مشاهده راهنمای Markdown</a>
+      <a class="btn" href="README_FA.txt">راهنمای متنی</a>
+    </div>
+    <div class="preview">
+      <img src="assets/rr_backtest_preview.png" alt="پیش‌نمایش شماتیک ابزار RR بک‌تست با باکس‌های سبز و قرمز، فهرست معاملات و دکمه‌های BUY/SELL">
+      <div class="caption">پیش‌نمایش شماتیک رابط کاربری — این تصویر از محیط زنده MT5 گرفته نشده است.</div>
+    </div>
+  </section>
+
+  <section class="features">
+    <div class="feature"><b>ورود سریع</b><span>با BUY یا SELL ابزار جدید را در مرکز ناحیه قابل مشاهده چارت بساز.</span></div>
+    <div class="feature"><b>RR زنده</b><span>سطح‌ها را بکش؛ مقدار RR هم‌زمان روی چارت و در فهرست تغییر می‌کند.</span></div>
+    <div class="feature"><b>هشدار هر معامله</b><span>هشدار SL/TP را برای هر ردیف جدا روشن یا خاموش کن.</span></div>
+  </section>
+
+  <section class="grid">
+    <article class="card">
+      <h2><span class="num">01</span> نصب در MT5</h2>
+      <ol class="steps">
+        <li>فایل ZIP را از حالت فشرده خارج کن.</li>
+        <li>در MetaTrader 5 مسیر <span class="pill">File → Open Data Folder</span> را باز کن.</li>
+        <li>فایل <span class="pill">RR_Backtest_Tool.mq5</span> را در <span class="pill">MQL5/Indicators</span> کپی کن.</li>
+        <li>در MetaEditor بازش کن، Compile بزن و از Navigator روی چارت اجرا کن.</li>
+      </ol>
+    </article>
+    <article class="card">
+      <h2><span class="num">02</span> کنترل‌های پنل</h2>
+      <p><span class="pill">BUY / SELL</span> ساخت ابزار جدید برای جهت معامله.</p>
+      <p><span class="pill">ALERT ON / OFF</span> پایش سطح SL یا TP همان معامله.</p>
+      <p><span class="pill">ALERT HIT</span> هشدار یک‌بار اجرا شده؛ خاموش و دوباره روشن کن تا مسلح شود.</p>
+      <p><span class="pill">DELETE</span> حذف ردیف و باکس‌های مرتبط با آن.</p>
+    </article>
+    <article class="card">
+      <h2><span class="num">03</span> فاصله پیش‌فرض</h2>
+      <p>باکس در مرکز نمای فعلی چارت ایجاد می‌شود و دامنه‌ی میانگین از کندل‌های بسته‌شده‌ی قبل از همان کندل مرجع گرفته می‌شود.</p>
+      <div class="formula">SL distance = TP distance = 2 × Avg(High − Low, 20)</div>
+      <p>پس RR اولیه برابر <bdi dir="ltr">1:1</bdi> است. با کشیدن لبه‌های باکس نسبت دلخواهت را تعیین کن.</p>
+    </article>
+    <article class="card">
+      <h2><span class="num">04</span> نکات مهم</h2>
+      <p>اطلاعات روی باکس فقط جهت معامله و RR را در سمت چپ نشان می‌دهد؛ ارقام پوینت/پیپ روی باکس درج نمی‌شوند و متن استراتژی در رابط وجود ندارد.</p>
+      <div class="warn">آلارم بر اساس قیمت زنده عمل می‌کند (BUY با Bid و SELL با Ask). این اندیکاتور تیک‌های تاریخی را بازپخش نمی‌کند و آلارم آن جایگزین Historical Replay نیست.</div>
+      <p>شفافیت ۶۰٪ به‌صورت ترکیب بصری رنگ با پس‌زمینه شبیه‌سازی می‌شود، چون Fill مستطیل استاندارد MT5 آلفای واقعی ندارد.</p>
+    </article>
+  </section>
+
+  <div class="card" style="margin-top:18px">
+    <h2><span class="num">05</span> بررسی نسخه</h2>
+    <p>نسخه سورس: <span class="pill">3.00</span> — سورس از نظر ساختار، نام توابع و توازن آکولادها بررسی شده است. کامپایلر MetaEditor/MT5 در محیط ساخت در دسترس نبود؛ قبل از استفاده، در MetaEditor کامپایل و روی حساب دمو آزمایش کن.</p>
+  </div>
+  <div class="footer">RR Backtest Tool · MQL5 Indicator · Documentation in Persian</div>
+</div>
+</body>
+</html>
